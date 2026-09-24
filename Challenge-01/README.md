@@ -5,6 +5,6 @@
 3. calculate the total marks by adding the marks of all five subjects
 4. calculate the average marks by dividing the total marks by 5
 5. calculate the percentage using:
-   percentage = (totalmarks/500)*100
+   percentage = (total marks/500)x100
 6. display the total marks, avg marks and percentage
 7. stop
