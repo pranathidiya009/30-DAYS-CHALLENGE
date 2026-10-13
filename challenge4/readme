@@ -1,1 +1,8 @@
-
+Step 1: Start.
+Step 2: Initialize the variables
+Step 3: Ask the user to enter the number of days to analyze (`days`).
+Step 4: Check whether `days` is less than or equal to 0.
+Step 5: Repeat the following steps for each day from 1 to `days`
+Step 6: Calculate the average daily expense using
+Step 7: Display the expense analysis summary
+Step 8: Stop.
