@@ -1,5 +1,4 @@
-Challenge 4
-Code
+
 #include <stdio.h>
 
 int main() {
