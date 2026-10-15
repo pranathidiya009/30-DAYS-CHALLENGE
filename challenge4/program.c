@@ -1,52 +1,46 @@
-
+//Looplab
 #include <stdio.h>
+int main()
+{
+float amount;
+float smalltotal=0,mediumtotal=0,largetotal=0;
+int scount=0,mcount=0,lcount=0;
+printf("enter the value  of amount:\n");
+scanf("%f",&amount);
+while(amount!=0)
+{
+if(amount<0)
+{
+printf("entered num is negative\n");
+}
+else if(amount<100)
+{
+scount++;
+smalltotal=smalltotal+amount;
+}
+else if (amount<500)
+{
+mcount++;
+mediumtotal=mediumtotal+amount;
+}
+else if(amount>500)
+{
+lcount++;
+largetotal=largetotal+amount;
+}
+printf("enter the value of amount\n");
+scanf("%f",&amount);
+}
+printf("--------EXPENSE SUMMARY--------\n");
 
-int main() {
-    int days;
-    float expense, totalExpense = 0.0, averageExpense = 0.0;
-    float maxExpense = 0.0;
-    int maxDay = 1;
-    float budgetLimit = 100.0; // Define a warning threshold for high spending
+printf("small count is:%d\n",scount);
+printf("smalltotal is : %.2f\n",smalltotal);
 
-    printf("--- Daily Expense Analyzer ---\n\n");
-    
-    // Ask user for the tracking duration
-    printf("Enter the number of days to analyze: ");
-    scanf("%d", &days);
+printf("medium count is:%d\n",mcount);
+printf("medium total is:%.2f\n",mediumtotal);
 
-    if (days <= 0) {
-        printf("Invalid number of days. Exiting program.\n");
-        return 1;
-    }
+printf("large count is :%d\n",lcount);
+printf("large total is:%.2f\n",largetotal);
 
-    // Loop to collect and analyze expenses for each day
-    for (int i = 1; i <= days; i++) {
-        printf("Enter expense for Day %d: $", i);
-        scanf("%f", &expense);
-
-        // Accumulate total expenses
-        totalExpense += expense;
-
-        // Conditional statement to track the highest spending day
-        if (expense > maxExpense) {
-            maxExpense = expense;
-            maxDay = i;
-        }
-
-        // Conditional statement to check if spending exceeds the budget threshold
-        if (expense > budgetLimit) {
-            printf("  -> Warning: High spending detected on Day %d! (Exceeded $%.2f)\n", i, budgetLimit);
-        }
-    }
-
-    // Calculate average daily expense
-    averageExpense = totalExpense / days;
-
-    // Display final analysis report
-    printf("\n--- Expense Analysis Summary ---\n");
-    printf("Total Expenses:        $%.2f\n", totalExpense);
-    printf("Average Daily Expense: $%.2f\n", averageExpense);
-    printf("Highest Spending Day:  Day %d ($%.2f)\n", maxDay, maxExpense);
-
-    return 0;
+return 0;
 }
