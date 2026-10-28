@@ -1,1 +1,14 @@
+// Algorithm: Ticket Trace
 
+1. Read N and repeat until it is between 5 and 15.
+2. Read the N ticket IDs, repeating each one until it is between 1 and N.
+3. Print the scan sequence.
+4. For each ID from 1 to N, count how many times it appears in the log.
+5. If an ID's count is 0, mark it as missing; if its count is 2, mark it as the duplicate.
+6. If there is not exactly one missing ID and one duplicate, print "Invalid scan log" and stop.
+7. Print the duplicate ID and the missing ID.
+8. For each position i, compare ticket[i] with every ticket to its right, and count it when ticket[i] is bigger.
+9. Print the out-of-order pair count.
+10. Read R and calculate target = (R % N) + 1.
+11. Scan the log and print every position (counted from 1) where the ticket equals the target.
+12. Print the target ID and its occurrence count.
