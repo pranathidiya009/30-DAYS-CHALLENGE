@@ -1,0 +1,9 @@
+START
+1. Read N, scores and T (repeat if out of range).
+2. Find row and column totals; print the highest ones.
+3. Find the highest score, its positions, and count cells >= T.
+4. Add both diagonals; say "balanced" if equal.
+5. Add all boundary cells (corners once).
+6. Find interior cells greater than all 4 neighbours and >= T.
+7. If hotspot: CRITICAL, else if count >= N: WARNING, else NORMAL.
+END
