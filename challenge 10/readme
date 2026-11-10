@@ -1,1 +1,18 @@
+**Algorithm: EcoGuard**
 
+1. Start and set `dataReady = 0`.
+2. Display the menu (1 to 7) and read `choice`.
+3. If choice = 1, read temp, humidity and AQI for all 5 zones × 7 days, re-asking on invalid values, then set `dataReady = 1`.
+4. If choice is 2 to 6 and `dataReady = 0`, print "Enter data first" and return to the menu.
+5. If choice = 2, print the three matrices as tables.
+6. If choice = 3, calculate each zone's average temp, humidity and AQI (sum ÷ 7).
+7. If choice = 4, for each zone count days where AQI > 150 OR temp > 35 OR humidity > 80 (each day once) and print those day numbers.
+8. If choice = 5, calculate the averages, then compute each zone's Green Index.
+9. Green Index: component scores are `100 − avgAQI/5`, `100 − 4×|avgTemp − 25|` and `100 − 2×|avgHum − 50|`, with negatives set to 0.
+10. Combine them as `0.4×AQI score + 0.3×Temp score + 0.3×Hum score`.
+11. Rank each zone as 1 + the number of zones with a higher Green Index (ties share a rank), and print zones in rank order.
+12. If choice = 6, calculate the averages and risk days, then print the recommendation for each zone.
+13. Recommendation rules: avgAQI > 150 means reduce idling or ventilate; avgTemp > 35 means add shade; avgHumidity > 80 means check ventilation or stagnant water.
+14. If no average is flagged, print "review flagged days" when `riskDays > 0`, otherwise "continue monitoring".
+15. If choice = 7, exit; for any other value, print "Invalid choice".
+16. Repeat from step 2 until choice = 7, then stop.
