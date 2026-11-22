@@ -1,1 +1,11 @@
+**WATERWISE Algorithm**
 
+1. Start.
+2. Input 5 zone targets and 7 daily readings per zone (re-enter if invalid).
+3. Show menu and repeat until Exit:
+   - Display the data.
+   - For each zone, find total, average, peak and peak day. Count over-limit days, excess, spike days and unique alert days. Print the report.
+   - Rank zones by excess (ties get the same rank).
+   - Show a conservation action for each zone.
+   - Options 3 and 4 only work after option 2.
+4. Stop on Exit.
